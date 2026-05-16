@@ -3,13 +3,13 @@
 using namespace std;
 
 const int _max = 1e4;
-const int sz = 7;
-const int steps = 30;
+const int sz = 9;
+const int steps = 4;
 
 int current = 1;
 int c[steps+1];
 
-int A[sz] = {7, 13, 23, 53, 73, 97, 127};
+int A[sz] = {132, 422, 481, 536, 1044, 1101, 1161, 1452, 1581};
 bool B[_max] = {false};
 
 void step() {
