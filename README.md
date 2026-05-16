@@ -4,5 +4,5 @@ $$ c_n = \frac{\ell(n A)}{n} $$
 is non-decreasing?
 
 Note that it is easy to show that
-$$ c_{k n} \geq c_{n}, $$
+\[ c_{k n} \geq c_{n}, \]
 since we can take an arithmetic progression $a, ..., a + m d$ in $n A$ and obtain an arithmetic progression $k a, ..., k a + k m d$ in $k n A$.
