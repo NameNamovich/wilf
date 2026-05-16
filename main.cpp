@@ -65,9 +65,9 @@ int main() {
     }
     
     if ( flag ) {
-        cout << "The sequence is increasing." << endl;
+        cout << "The sequence is non-decreasing." << endl;
     } else {
-        cout << "The sequence is not increasing." << endl;
+        cout << "The sequence is not non-decreasing." << endl;
     }
 
     return 0;
