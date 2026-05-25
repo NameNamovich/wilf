@@ -177,3 +177,129 @@
   Коэффициенты $h_n$ равны
   $ h_n = ( n! (n+a+b+c+d-1)_n ) / ( Gamma(2 n + a+b+c+d) ) times Gamma(n+a+b) Gamma(n+c+d) dots $
 ]
+
+#slide[
+  = $q$-аналоги
+
+  Зафиксируем комплексный параметр $|q| < 1$.
+  $ (a; q)_n = product_(m = 0)^(n-1) (1 - a q^m), quad (a; q)_(-n) = 1 / ( product_(m=1)^n (1-a/q^m) ), $
+  $ (a; q)_(infinity) = product_(m = 0)^(infinity) (1 - a q^m). $
+]
+
+#slide[
+  = $q$-аналоги
+
+  Много тождеств, например,
+  $ 1 / (q; q)_(infinity) = sum_(n = 0)^(infinity) q^n / (q; q)_n. $
+
+  $q$-аналог биномиальной теоремы
+  $ (a x; q)_(infinity) / (x; q)_(infinity) = sum_(n = 0)^(infinity) (a; q)_n / (q; q)_n x^n. $
+]
+
+#slide[
+  = Базисный гипергеометрический ряд
+
+  Гипергеометрические ряды обобщаются до
+  $ attach(phi, bl:r, br:s) (mat(a_1, a_2, ..., a_r; b_1, ..., b_s); q, z) $
+  $ = sum_(n = 0)^(infinity) (a_1, a_2, ..., a_r; q)_n / (q, b_1, ..., b_s)_n [(-1)^n q^(n(n-1)/2)]^(1+s-r) z^n. $
+]
+
+#slide[
+  = Тождество Рамануджана
+  $ attach(psi, bl:1, br:1) (a; b; q, z) = sum_(n = -infinity)^(infinity) (a; q)_n / (b; q)_n z^n = ((b\/a, q, q\/(a z), a z; q)_(infinity)) / ((b, b \/ (a z), q\/a, z; q)_(infinity)). $
+  Например, отсюда можно получить для $|q| < |a|, |b| < 1$
+  $ sum_(n = -infinity)^(infinity) a^n / (1 - b q^n) = sum_(n = -infinity)^(infinity) b^n / (1 - a q^n), $
+  хотя и так очевидно раскрытием скобок $1/(1-x)=1+x+x^2+dots.c$
+]
+
+#slide[
+  = Цепная дробь Роджерса--Рамануджана
+
+  Цепная дробь
+  $ R(q) = q^(1\/5) / (1 + q / (1 + q^2 / (1 + q^3 / (1 + dots.down)))) $
+  допускает явное выражение
+  $ R(q) = q^(1\/5) ((q;q^5)_(infinity) (q^4; q)_(infinity)) / ((q^2; q)_(infinity) (q^3; q)_(infinity)). $
+]
+
+#slide[
+  = Цепная дробь Роджерса--Рамануджана
+
+  Знаменатель равен
+  $ 1 / ((q^2; q)_(infinity) (q^3; q)_(infinity)) = sum_(n = 0)^(infinity) q^(n^2 + n) / (q; q)_n, $
+  а числитель
+  $ 1 / ((q;q^5)_(infinity) (q^4; q)_(infinity)) = sum_(n = 0)^(infinity) q^(n^2) / (q; q)_n. $
+]
+
+#slide[
+  = Симметрические функции
+
+  Для разбиения $(1^(m_1), 2^(m_2), ...)$ положим
+  $ z_(lambda) = product_(i>=1) i^(m_i) m_i!, $
+  и его $q$-деформация
+  $ z_(lambda) (q, t) = z_(lambda) product_(i=1)^(ell(lambda)) (1-q^(lambda_i)) / (1-t^(lambda_i)). $
+]
+
+#slide[
+  = Симметрические функции
+
+  Также пусть $p_(lambda) (x)$
+  $ p_(lambda) (x) = p_(lambda_1) (x) dots.c p_(lambda_ell) (x), $
+  где
+  $ p_k (x) = x_1^k + x_2^k + dots $ 
+]
+
+#slide[
+  = Симметрические функции
+
+  Выполняется тождество
+  $ Pi (x, y; q, t) = product_(i, j) (t x_i x_j; q)_(infinity) / (x_i y_j; q)_(infinity) $
+  $ = sum_(lambda)  ( p_(lambda) (x) p_(lambda) (y)) / (z_(lambda) (q, t)). $
+]
+
+#slide[
+  == Деформированное скалярное произведение
+  $ (p_lambda, p_mu)_(q, t) = delta_(lambda, mu) z_(lambda) (q, t). $
+  имеет наглядный смысл для симметрических многочленов
+  $ (f, g)_(q, t) = 1/N! 1/(2pi i)^N integral_(T^N) f(x) overline(g(x)) Delta (x; q, t) (d x_1) / x_1 dots.c (d x_N) / x_N, $
+  $ Delta (x; q, t) = product_(1<=i != j <= N) (x_i x_j^(-1); q)_(infinity) / (t x_i x_j^(-1); q)_(infinity). $ 
+]
+
+#slide[
+  == Деформированное скалярное произведение
+
+  Для любых двух двойственных базисов в пространстве симметрических функций выполняется
+  $ sum_(lambda) u_lambda (x) v_lambda (y) = Pi (x, y; q, t). $
+]
+
+#slide[
+  = Многочлены Макдональда
+
+  Должны иметь вид
+  $ P_(lambda) (x; q, t) = m_(lambda) (x) + sum_(mu < lambda) u_(lambda mu) (q, t) m_(lambda) (x), $
+  где $m_(lambda) (x)$ мономиальная симметрическая функция $x_1^(lambda_1) dots.c x_k^(lambda_k).$
+
+  Ортогональны
+  $ (P_(lambda), P_(mu)) = 0, quad lambda != mu. $
+]
+
+#slide[
+  = Многочлены Макдональда
+  Однако это оставляет их норму неизвестной. Так как
+  $ P_(lambda) / ((P_lambda, P_lambda)) $
+  двойственный базис, то мы имеем
+  $ sum_(lambda) (P_(lambda) (x) P_(lambda) (y)) / ((P_lambda, P_lambda)) = Pi (x, y; q, t). $
+]
+
+#slide[
+  = Многочлены Макдональда
+  Далее подстановка $y = (1, t, t^2, ...)$.
+  $ Pi (x, y; q, t) = product_(i>=1) 1/(1-x_i), $
+  $ P_(lambda) (1,t,t^2, ...) = product_(s in lambda) (t^(c(s)) - q^(a'(s)) t^(ell'(s))) / (1 - q^(a(s)) t^(ell(s)+1)). $
+]
+
+#slide[
+  = Многочлены Макдональда
+
+  После дополнительных выкладок выводится формула крюков
+  $ (P_lambda, P_lambda) = product_(s in lambda) (1 - q^(a(s)+1) t^(l(s))) / (1 - q^(a(s)) t^(l(s)+1)). $
+]
