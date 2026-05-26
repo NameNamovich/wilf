@@ -303,3 +303,35 @@
   После дополнительных выкладок выводится формула крюков
   $ (P_lambda, P_lambda) = product_(s in lambda) (1 - q^(a(s)+1) t^(l(s))) / (1 - q^(a(s)) t^(l(s)+1)). $
 ]
+
+#slide[
+  = Многочлены Джека
+
+  При взятии предела $q arrow 1$ c $t = q^(alpha)$ получаем многочлены Джека
+  $ lim_(q arrow 1) P_(lambda) (x; q, q^alpha) = J_(lambda) (x; alpha). $
+  Имеет место треугольность
+  $ J_(lambda) = m_(lambda) + sum_(mu < lambda) v_(lambda mu) (alpha) m_mu, $
+]
+
+#slide[
+  = Многочлены Джека
+
+  а также ортогональность при скалярном произведении ($x_i = e^(i theta_i)$)
+  $ integral_(x in T^N) f(x) overline(g(x)) product_(1<=j<k<=n) |x_i - x_j|^(2/alpha) d theta_1 ... d theta_n. $
+]
+
+#slide[
+  = Многочлены Шура
+
+  При $alpha = 1$ многочлены Джека становятся многочленами Шура
+  $ s_(lambda) = ( det (x_j^(lambda_i + n - i))_(i, j) ) / ( det (x_j^(n - i))_(i, j) ). $
+]
+
+#slide[
+  = Многочлены Шура. Тождества Коши
+  Тождество воспроизводящего ядра становится
+  $ sum_(lambda) s_(lambda) (x) s_(lambda) (y) = product_(i, j) (1 - x_i y_j)^(-1), $
+  также имеем двойственное
+  $ sum_(lambda) s_(lambda) (x) s_(lambda') (y) = product_(i, j) (1 + x_i y_j). $
+  Два тождества можно связать инволюцией $omega$, переводящей полные однородные функции $h_k$ в элементарные $e_k$.
+]
